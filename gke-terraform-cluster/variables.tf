@@ -1,13 +1,21 @@
-variable "gke_username" {
-  default = ""
-  description = "gke username"
+variable "app_id" {
+  type = string
+  default = "devops-practice"
 }
-variable "gke_password" {
-  default = ""
-  description = "gke password"
+variable "google_project" {
+  description = "GCP Project Id"
+  type        = string
+  default     = "lab5-llmdoc-dev1"
 }
 
-variable "gke_num_nodes" {
-  default = 2
+variable "google_region" {
+  description = "Default GCP region"
+  type        = string
+  default     = "us-east5"
+}
 
+variable "gke_machine_type" {
+  description = "GKE Node Size"
+  type        = string
+  default     = "e2-medium-2"
 }
