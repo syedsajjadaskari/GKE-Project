@@ -1,5 +1,13 @@
-apiVersion:
+apiVersion: v1
 kind: PersistentVolumeClaim
-metadata:
-  name: 
+metadata: 
+  name: mysql-pv-claim
 spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: gke-storage-class
+  resources:
+    requests:
+      storage: 4Gi
+    
+    
